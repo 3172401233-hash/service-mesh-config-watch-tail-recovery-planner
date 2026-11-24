@@ -1,0 +1,16 @@
+{
+  "name": "service-mesh-config-watch-tail-recovery-planner",
+  "version": "1.0.0",
+  "description": "离线规划 xDS watch 尾部缺口的代理恢复方案（不连接控制面）",
+  "type": "module",
+  "engines": {
+    "node": ">=24.16.0"
+  },
+  "bin": {
+    "watch-recovery-plan": "bin/recovery-plan.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "UNLICENSED"
+}

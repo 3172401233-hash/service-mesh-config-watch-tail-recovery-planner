@@ -1,0 +1,43 @@
+{
+  "proxyConfig": {
+    "proxyId": "edge-proxy-7",
+    "watchStartVersion": 120,
+    "watchTailVersion": 125,
+    "lastAckVersion": 110,
+    "maxGapVersions": 1000
+  },
+  "snapshot": {
+    "version": 125,
+    "complete": true,
+    "resources": [
+      { "type": "cluster", "id": "c1", "version": 125 },
+      {
+        "type": "route",
+        "id": "r1",
+        "version": 125,
+        "dependencies": [{ "type": "cluster", "id": "c1" }]
+      }
+    ]
+  },
+  "heldResources": [
+    { "type": "cluster", "id": "c1", "version": 110 },
+    { "type": "cluster", "id": "c-ghost", "version": 112 },
+    {
+      "type": "route",
+      "id": "r1",
+      "version": 110,
+      "dependencies": [{ "type": "cluster", "id": "c1" }]
+    },
+    {
+      "type": "route",
+      "id": "r-ghost",
+      "version": 113,
+      "dependencies": [{ "type": "cluster", "id": "c-ghost" }]
+    }
+  ],
+  "tombstones": [
+    { "type": "route", "id": "r-ghost", "version": 114 }
+  ],
+  "nacks": [],
+  "dependencyGraph": {}
+}
